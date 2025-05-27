@@ -1,0 +1,415 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2a5934; /* Natural green color */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #2a5934;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #e78c0e; /* Safari orange */
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #d67e0a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #2a5934;
+    border: 2px solid #2a5934;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background-color: #2a5934;
+    color: white;
+}
+
+.read-more {
+    color: #2a5934;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+    border-bottom: 2px solid transparent;
+}
+
+.read-more:hover {
+    border-bottom: 2px solid #2a5934;
+}
+
+/* HEADER STYLES */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    max-height: 60px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #2a5934;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2a5934;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    width: 150px;
+}
+
+.search-box button {
+    background-color: #2a5934;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/api/placeholder/1600/600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* FEATURED DESTINATIONS */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    padding: 0 20px;
+}
+
+.destination-card p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.destination-card .btn-secondary {
+    margin: 0 20px 20px;
+}
+
+/* ABOUT SITE SECTION */
+.about-site {
+    background-color: #f0f7f1; /* Light green background */
+    text-align: center;
+}
+
+.about-site p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* WILDLIFE HIGHLIGHTS */
+.wildlife-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.wildlife-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wildlife-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.wildlife-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    padding: 0 20px;
+}
+
+.wildlife-card p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.wildlife-card .read-more {
+    margin: 0 20px 20px;
+    display: inline-block;
+}
+
+/* TRAVEL PLANNING */
+.travel-planning {
+    background-color: #f7f4e9; /* Light sand color */
+}
+
+.travel-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.best-time, .quick-tips {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-tips ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.quick-tips li {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #1a3c22; /* Dark green */
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:hover {
+    color: #e78c0e;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #1a3c22;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: #e78c0e;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav li {
+        margin: 5px 10px;
+    }
+    
+    .search-box {
+        margin-top: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .destinations-grid,
+    .wildlife-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}

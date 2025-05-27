@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Natural Botswana</title>
+    <link rel="stylesheet" href="NB Contactpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="Pics/NB logo.jpeg" alt="Natural Botswana Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="NB Homepage.html">Home</a></li>
+                    <li><a href="NB Aboutpage.html">About</a></li>
+                    <li><a href="NB Destinationpage.html">Destinations</a></li>
+                    <li><a href="NB Wildlifepage.html">Wildlife</a></li>
+                    <li><a href="NB Planpage.html">Travel Tips</a></li>
+                    <li><a href="NB Gallerypage.html">Gallery</a></li>
+                    <li><a href="NB Contactpage.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section class="page-title">
+        <h1>Contact Us / Feedback</h1>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="contact-container">
+        <!-- Contact Info Column -->
+        <aside class="contact-info">
+            <h2>Contact Info</h2>
+            
+            <div class="info-block">
+                <h3><i class="fas fa-envelope"></i> Email Address</h3>
+                <p><a href="mailto:info@naturalbotswana.com">info@naturalbotswana.com</a></p>
+                <p><a href="mailto:bookings@naturalbotswana.com">bookings@naturalbotswana.com</a></p>
+            </div>
+            
+            <div class="info-block">
+                <h3><i class="fas fa-share-alt"></i> Social Media Links</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="info-block">
+                <h3><i class="fas fa-map-marker-alt"></i> Physical Address</h3>
+                <address>
+                    Natural Botswana Travel<br>
+                    Plot 54321, Airport Road<br>
+                    Gaborone, Botswana<br>
+                    P.O. Box 12345
+                </address>
+            </div>
+            
+            <div class="info-block">
+                <h3><i class="fas fa-question-circle"></i> FAQ Link</h3>
+                <p><a href="#faq-section" class="faq-link">Frequently Asked Questions</a></p>
+            </div>
+        </aside>
+        
+        <!-- Contact Form Column -->
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="submit-form.php" method="post">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Message Type:</label>
+                    <div class="radio-options">
+                        <div class="radio-option">
+                            <input type="radio" id="general" name="messageType" value="general" checked>
+                            <label for="general">General Inquiry</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="feedback" name="messageType" value="feedback">
+                            <label for="feedback">Feedback</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="travel" name="messageType" value="travel">
+                            <label for="travel">Travel Question</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="content" name="messageType" value="content">
+                            <label for="content">Content Suggestion</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Subscribe to newsletter</label>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="faq-preview">
+        <h2>FAQ Preview</h2>
+        <p>Commonly asked questions with expandable answers</p>
+        
+        <div class="faq-items">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is the best time to visit Botswana?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The dry season (May to October) is generally considered the best time to visit Botswana for wildlife viewing. During this period, animals gather around water sources making them easier to spot.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do I need a visa to visit Botswana?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Visa requirements depend on your nationality. Many Western countries receive visa-free entry for up to 90 days. We recommend checking with your local Botswana embassy or consulate for the most current information.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What vaccinations do I need for Botswana?</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Recommended vaccinations include Hepatitis A & B, Typhoid, and Yellow Fever (if coming from endemic countries). Malaria prophylaxis is also recommended for most regions. Please consult your healthcare provider before travel.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all">
+            <a href="faq.html" class="btn">View All FAQs</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="sitemap.html">Sitemap</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright © 2025 Natural Botswana</p>
+        </div>
+    </footer>
+
+    <script src="NB Contactpage.js"></script>
+</body>
+</html>
